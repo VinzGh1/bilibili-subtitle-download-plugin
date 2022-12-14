@@ -134,7 +134,7 @@ CHANGE SUB_LANGUAGE to:
 
   /**
    * Convert second to time stamp
-   * @param {*} sec 
+   * @param {*} sec
    */
   function secToTimer(sec) {
     let o = new Date(0);
@@ -147,8 +147,8 @@ CHANGE SUB_LANGUAGE to:
 
   /**
    * Create vodeo link and append to element
-   * @param {*} url 
-   * @param {*} title 
+   * @param {*} url
+   * @param {*} title
    */
   function createVideoElement(url, title) {
     const a = document.createElement("a");
@@ -169,7 +169,7 @@ CHANGE SUB_LANGUAGE to:
     <div id="gen-sigle">
       <button id="down-this" class="btn" type="button"> ${LANGS[appLang].gen_this_link} </button>
     </div>
-    
+
 
     <select id="changeLanguage" class="subtitleSelect" name="lang">
       ${createSelectOption()}
@@ -178,7 +178,7 @@ CHANGE SUB_LANGUAGE to:
       ${createSubFormatOptions()}
     </select>
     <select id="changeQuality" class="subtitleSelect" name="quality">
-      
+
     </select>
 
     <div class="linkContainer" id="jsonSubtitleList">${LANGS[appLang].subtitle}\&nbsp;:\&nbsp;</div>
@@ -229,12 +229,12 @@ CHANGE SUB_LANGUAGE to:
   <div id="downloadBiliintScript">
     <button id="subtitleDownload" type="button"> Download Sub </button>
   </div>
- 
- 
+
+
     Not yet added
     <button> Download Video </button>
     <button> Download Audio </button>
-  
+
   */
 
   // document
@@ -259,10 +259,10 @@ CHANGE SUB_LANGUAGE to:
 
   /**
    * Generate subtitle
-   * @param {*} ep_id 
-   * @param {string} title 
-   * @param {string} epTitle 
-   * @param {boolean} thisEp 
+   * @param {*} ep_id
+   * @param {string} title
+   * @param {string} epTitle
+   * @param {boolean} thisEp
    */
   function generateSubtitle(ep_id, title, epTitle, thisEp) {
     const FETCH_URL = `https://api.bilibili.tv/intl/gateway/web/v2/subtitle?s_locale=vi_VN&platform=web&episode_id=${ep_id}&spm_id=bstar-web.pgc-video-detail.0.0&from_spm_id=bstar-web.homepage.top-list.all`;
@@ -327,8 +327,8 @@ CHANGE SUB_LANGUAGE to:
 
   /**
    * Genearate video ep
-   * @param {*} ep_id 
-   * @param {string} title 
+   * @param {*} ep_id
+   * @param {string} title
    */
   function generateEpElement(ep_id, title) {
     fetch(
@@ -555,7 +555,7 @@ CHANGE SUB_LANGUAGE to:
   GM_addStyle(`
 
   #downloadBiliintScript {
-      position: fixed; 
+      position: fixed;
       bottom: 6rem;
       left: 1rem;
       margin: 3px;
@@ -592,7 +592,7 @@ CHANGE SUB_LANGUAGE to:
     margin-bottom: 6px;
     opacity: 0.97;
   }
-  
+
   #mySortBtn {
     cursor: pointer;
     padding: 3px;
